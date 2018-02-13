@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Import Google Icon Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <!-- Import particlesJS style -->
+    <link rel="stylesheet" href="css/particlesJS.css">
+    <!-- Import noUiSliderJS style-->
+    <link rel="stylesheet" href="css/nouislider.css">
+    <!-- Import Materialize.css -->
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" media="screen,projection"/>
+
+
+    <!-- Let browser know website is optimised for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>ScienceScape</title>
+  </head>
+
+  <body> <!-- TODO Ensure HTML5 header, main and footer tags are used -->
+
+    <div id="particles-js"></div>
+
+    <div class="container"> <!-- Page content to go within container -->
+
+      <!-- TODO Add navagation -->
+
+      <!-- TODO Add Side Menu  -->
+
+      <h1 class="white-text center" style="max-width:100%">ScienceScape</h1>
+
+      <div class="divider"></div>
+
+      <div class="section">
+
+        <!-- <div class="red darken-4 white-text">Some text in a div</div>
+        <div class="blue lighten-2 white-text">Some text in a div</div>
+        <div class="purple white-text">Some text in a div</div> -->
+
+        <!-- TODO Add Login / Register / Proceed As Guest buttons within accordian -->
+        <!-- Collapsible elements only need initialization if they are added dynamically.
+        You can also pass in options inside the initialization,
+        however this can be done in the HTML markup as well. -->
+        <ul class="collapsible" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header"><i class="material-icons">person</i>Log In</div>
+            <div class="collapsible-body white">
+
+              <!-- Login -->
+              <div class="row">
+                <form class="col s12">
+
+                  <div class="input-field"</div>
+                    <i class="material-icons prefix">person</i>
+                    <input id="login-username" type="text" class="validate">
+                    <label for="login-username">Username</label>
+                  </div>
+
+                  <div class="input-field"</div>
+                    <i class="material-icons prefix">lock</i>
+                    <input id="login-password" type="password" class="validate">
+                    <label for="login-password">Password</label>
+                  </div>
+
+                  <button class="btn waves-effect waves-red blue darken-4" type="submit" name="login">Login</button>
+
+                </form>
+              </div>
+
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">person_add</i>Register</div>
+            <div class="collapsible-body white">
+
+            <!-- Register -->
+            <div class="row">
+              <form class="col s12">
+
+                <div class="input-field"</div>
+                  <i class="material-icons prefix">email</i>
+                  <input id="email" type="email" class="validate">
+                  <label for="email">Email Address</label>
+                </div>
+
+                <div class="input-field"</div>
+                  <i class="material-icons prefix">person</i>
+                  <input id="register-username" type="text" class="validate">
+                  <label for="register-username">Username</label>
+                </div>
+
+                <div class="input-field"</div>
+                  <i class="material-icons prefix">lock</i>
+                  <input id="password-register" type="password" class="validate">
+                  <label for="password-register">Password</label>
+                </div>
+
+                <div class="input-field"</div>
+                  <i class="material-icons prefix">lock</i>
+                  <input id="password-confirm" type="password" class="validate">
+                  <label for="password-confirm">Confirm Password</label>
+                </div>
+
+                <button class="btn waves-effect waves-red blue darken-4" type="register" name="login">Register</button>
+
+              </form>
+            </div>
+
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">person_outline</i>Proceed As Guest</div>
+            <div class="collapsible-body white">
+
+            <!-- Guest -->
+            <a class="waves-effect waves-red btn blue darken-4">Continue</a>
+
+            </div>
+          </li>
+        </ul>
+
+        <!-- TODO Add sample card layouts for graph options -->
+        <!-- Example of selection of analysis cards to choose from -->
+        <div class="row">
+
+          <!-- CARD 1 -->
+          <div class="col s12 m6 l4"> <!-- Full width on mobile, 2 per row medium, 3 per row large -->
+            <div class="card">
+              <div class="card-image margin-5">
+                <img src="images/get-networks.svg">
+              </div>
+              <div class="card-content">
+                <span class="card-title">Get Networks</span>
+                <p>Visualize and download networks of keywords and/or authors and/or journals, and more.</p>
+              </div>
+              <div class="card-action">
+                <a class="waves-effect waves-light btn blue darken-4">Select</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="col s12 m6 l4"> <!-- Full width on mobile, 2 per row medium, 3 per row large -->
+            <div class="card">
+              <div class="card-image margin-5">
+                <img src="images/reference-scape.svg">
+              </div>
+              <div class="card-content">
+                <span class="card-title">Reference Scape</span>
+                <p>Visualize and download networks using a landscape of references.</p>
+              </div>
+              <div class="card-action">
+                <a class="waves-effect waves-light btn blue darken-4">Select</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="col s12 m6 l4"> <!-- Full width on mobile, 2 per row medium, 3 per row large -->
+            <div class="card">
+              <div class="card-image margin-5">
+                <img src="images/papers-over-time.svg">
+              </div>
+              <div class="card-content">
+                <span class="card-title">Papers Over Time</span>
+                <p>Visualiz.e how many papers are published each year in your file</p>
+              </div>
+              <div class="card-action">
+                <a class="waves-effect waves-light btn blue darken-4">Select</a>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- /row -->
+
+        <!-- TODO Add dropzone upload box -->
+        <!-- File uplaoader -->
+        <div class="row">
+          <div class="col s12">
+            <div class="card">
+              <div class="card-content">
+
+                <div class="row">
+                  <div class="col s9">
+                    <form action="#">
+                      <div class="file-field">
+                        <p>Select .CSV file to upload</p>
+                        <br>
+                        <div class="btn blue darken-4">
+                          <span>File</span>
+                          <input type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                          <input class="file-path validate" type="text">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col s3">
+                    <p>Save Uploaded File</p>
+                    <br>
+                    <!-- Switch -->
+                    <div class="switch">
+                      <label>
+                        Off
+                        <input type="checkbox">
+                        <span class="lever"></span>
+                        On
+                      </label>
+                    </div>
+                  </div>
+                  <!-- TODO Add upload/submit button -->
+                </div>
+
+              </div> <!-- /card-content -->
+            </div>
+          </div>
+        </div> <!-- /row -->
+
+        <!-- Dropdown menu from a button -->
+        <div class="row">
+          <div class="col s12">
+            <div class="card">
+              <div class="card-content">
+
+                <h6>Button with drop down menus</h6>
+                <br>
+
+                <!-- Dropdown trigger -->
+                <a class="dropdown-button btn blue darken-4" href="#" data-activates="dropdown-list-1">Select Option</a>
+
+                <!-- Dropdown structure -->
+                <ul id="dropdown-list-1" class="dropdown-content">
+                  <li><a href="#">One</a></li>
+                  <li><a href="#">Two</a></li>
+                  <li><a href="#">Three</a></li>
+                  <li><a href="#">Four</a></li>
+                  <li><a href="#">Five</a></li>
+                </ul>
+
+              </div> <!-- /card-content -->
+            </div>
+          </div>
+        </div> <!-- /row -->
+
+        <!-- TODO Add sample form selection boxes -->
+        <!-- Single Item Form Select Drop Down -->
+        <!-- Needs to be initialised via JS below body
+            In addition, you will need a separate call for any dynamically generated select elements your page generates. -->
+        <div class="row">
+          <div class="col s12">
+            <div class="card">
+              <div class="card-content">
+
+                <h6>Single Item Form Select</h6>
+                <br>
+
+                <div class="row">
+                  <div class="input-field col s6"> <!-- Wrap in input-field for proper alignment -->
+                    <select>
+                      <option value="" disabled selected>Select Field</option>
+                      <option value="fn">File Name</option>
+                      <option value="vr">Version Number</option>
+                      <option value="pt">Publication Type</option>
+                      <option value="au">Authors</option>
+                      <option value="af">Author Full Name</option>
+                    </select>
+                    <label>Select Field</label>
+                  </div>
+                </div>
+
+              </div> <!-- /card-content -->
+            </div>
+          </div>
+        </div> <!-- /row -->
+
+        <!-- TODO Add form slider for filter selection -->
+        <!-- Slider range selector for data filtering -->
+        <!-- Needs to additionally link to nouislider.css and nouislider.js in the extras folder
+             Also need to initialise via JS below the body. -->
+        <div class="row">
+          <div class="col s12">
+            <div class="card">
+              <div class="card-content">
+
+                <h6>Select Start & End Year to Filter Data</h6>
+                <br>
+
+                <div id="range-slider"></div>
+                <div class="left">1900</div>
+                <div class="right">2030</div>
+
+              </div> <!-- /card-content -->
+            </div>
+          </div>
+        </div> <!-- /row -->
+
+      </div> <!-- /section -->
+
+      <!-- <div class="divider"> -->
+
+    </div> <!-- /body container -->
+
+    <!-- Add footer here - Reference current ScienceScape site for content -->
+    <footer class="page-footer">
+      <div class="container">
+
+        <div class="row">
+          <div class="col s12 m4">
+            <h6>Built With:</h6>
+            <a href="#">Python</a><br>
+            <a href="#">Sigma.js</a><br>
+            <a href="#">Django</a><br>
+            <a href="#">Materialize CSS</a><br>
+            <a href="#">Particles.js</a><br>
+            <a href="#">jQuery</a><br>
+            <a href="#">Heroku</a><br>
+            <!-- TODO Add modal with CC atrribution for The Noun Project Icons -->
+            <a href="https://thenounproject.com/">The Noun Project</a> - <a href="#">Attribution</a><br>
+            <a href="https://www.youtube.com/watch?v=Q5im0Ssyyus">Candy from Candy Mountain</a><br>
+          </div>
+          <div class="col s12 m4 underline">
+            <h6>Related Tools:</h6>
+            <a href="https://tools.medialab.sciences-po.fr/table2net/">Table2Net</a><br>
+            <p>If you want to get the citation network from the table with the DOI, you can use Table2Net in "citation" mode :)</p>
+            <a href="http://www.sebastian-grauwin.com/?page_id=492">BiblioTools</a><br>
+            <p>BiblioTools was developed by Sebastian Grauwin for a similar purpose. It is dedicated to getting networks from Web of Science, and can deal a large mass of data.</p>
+            <a href="http://gephi.org/">Gephi</a><br>
+            <p>We recommand to use Gephi for spatializing networks. It is more efficient than this website. Check its <a href="http://gephi.org/users/">tutorials</a></p>
+          </div>
+          <div class="col s12 m4 underline">
+            <h6>Development:</h6>
+            <p>Originally developed by Mathieu Jacomy at the <a href="http://medialab.sciences-po.fr/">Sciences-Po Medialab</a>.</p>
+            <p>Refreshed, refactored and tuned up by The Kodokans in March 2018, a second year undergraduate computer science team from <a href="https://www.kcl.ac.uk/">King's College London</a>.</p>
+            <!-- TODO Add modal with more info about The Kodokans and links to our respective sites -->
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-copyright">
+        <div class="container">
+        &copy; 2018 Sciences-Po Medialab & King's College London
+        </div>
+      </div>
+    </footer>
+
+
+
+    <!-- Import jQuery before materialize.js -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+    <!-- CDN source for particles-js -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Local source for noUiSlider.js -->
+    <script src="js/nouislider.js"></script>
+
+
+    <script type="text/javascript">
+      particlesJS.load('particles-js',         // Param 1 - div ID
+                       'json/particles.json',  // Param 2 - JSON settings
+                       function() {            // Param 3 - Function to fire after loading JSON
+                         console.log('particles.json loaded');
+                       });
+    </script>
+
+    <!-- Initialise form drop down select -->
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('select').material_select();
+      })
+    </script>
+
+    <!-- Initialise noUiSlider -->
+    <script type="text/javascript">
+    var slider = document.getElementById('range-slider');
+    noUiSlider.create(slider, {
+     start: [1950, 2000],
+     connect: true,
+     step: 1,
+     orientation: 'horizontal',
+     range: {
+       'min': 1900,
+       'max': 2030
+     },
+     format: wNumb({
+       decimals: 0
+     })
+    });
+    </script>
+
+  </body>
+
+</html>
