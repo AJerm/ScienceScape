@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="css/nouislider.css">
     <!-- Import Materialize.css -->
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" media="screen,projection"/>
+    <!-- Import Dropzone JS style-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.2.0/dropzone.css">
+    <!-- Import custom styling CSS -->
+    <link rel="stylesheet" href="css/extra.css">
+
 
 
     <!-- Let browser know website is optimised for mobile -->
@@ -121,7 +126,7 @@
 
         <!-- TODO Add sample card layouts for graph options -->
         <!-- Example of selection of analysis cards to choose from -->
-        <div class="row">
+        <div class="row"> <!-- ROW 1 -->
 
           <!-- Get Networks Card -->
           <div class="col s12 m6 l4"> <!-- Full width on mobile, 2 per row medium, 3 per row large -->
@@ -163,13 +168,17 @@
               </div>
               <div class="card-content">
                 <span class="card-title">Papers Over Time</span>
-                <p>Visualize how many papers are published each year in your file</p>
+                <p>Visualize how many papers are published each year in your file.</p>
               </div>
               <div class="card-action">
                 <a class="waves-effect waves-light btn blue darken-4">Select</a>
               </div>
             </div>
           </div><!-- /card col -->
+
+        </div> <!-- /row 1 -->
+
+        <div class="row"> <!-- ROW 2 -->
 
           <!-- Journals Over Time Card-->
           <div class="col s12 m6 l4"> <!-- Full width on mobile, 2 per row medium, 3 per row large -->
@@ -219,51 +228,9 @@
             </div>
           </div><!-- /card col -->
 
-        </div> <!-- /row -->
+        </div> <!-- /row 1 -->
 
-        <!-- TODO Add dropzone upload box -->
-        <!-- File uplaoader -->
-        <div class="row">
-          <div class="col s12">
-            <div class="card">
-              <div class="card-content">
 
-                <div class="row">
-                  <div class="col s9">
-                    <form action="#">
-                      <div class="file-field">
-                        <p>Select .CSV file to upload</p>
-                        <br>
-                        <div class="btn blue darken-4">
-                          <span>File</span>
-                          <input type="file">
-                        </div>
-                        <div class="file-path-wrapper">
-                          <input class="file-path validate" type="text">
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="col s3">
-                    <p>Save Uploaded File</p>
-                    <br>
-                    <!-- Switch -->
-                    <div class="switch">
-                      <label>
-                        Off
-                        <input type="checkbox">
-                        <span class="lever"></span>
-                        On
-                      </label>
-                    </div>
-                  </div>
-                  <!-- TODO Add upload/submit button -->
-                </div>
-
-              </div> <!-- /card-content -->
-            </div>
-          </div>
-        </div> <!-- /row -->
 
         <!-- Dropdown menu from a button -->
         <div class="row">
@@ -289,7 +256,9 @@
               </div> <!-- /card-content -->
             </div>
           </div>
-        </div> <!-- /row -->
+        </div> <!-- /row  -->
+
+
 
         <!-- TODO Add sample form selection boxes -->
         <!-- Single Item Form Select Drop Down -->
@@ -337,6 +306,72 @@
                 <div id="range-slider"></div>
                 <div class="left">1900</div>
                 <div class="right">2030</div>
+                <br>
+              </div> <!-- /card-content -->
+            </div>
+          </div>
+        </div> <!-- /row -->
+
+        <!-- Standard file uploader -->
+        <div class="row">
+          <div class="col s12">
+            <div class="card">
+              <div class="card-content">
+
+                <div class="row">
+                  <div class="col s9">
+                    <form action="#">
+                      <div class="file-field">
+                        <p>Select .CSV file to upload</p>
+                        <br>
+                        <div class="btn blue darken-4">
+                          <span>File</span>
+                          <input type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                          <input class="file-path validate" type="text">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col s3">
+                    <p>Save Uploaded File</p>
+                    <br>
+                    <!-- Switch -->
+                    <div class="switch">
+                      <label>
+                        Off
+                        <input type="checkbox">
+                        <span class="lever"></span>
+                        On
+                      </label>
+                    </div>
+                  </div>
+                  <!-- TODO Add upload/submit button -->
+                </div>
+
+              </div> <!-- /card-content -->
+            </div>
+          </div>
+        </div> <!-- /row -->
+
+        <!-- Dropzone JS-->
+        <!-- TODO Add CSV only validation -->
+        <div class="row">
+          <div class="col s12">
+            <div class="card">
+              <div class="card-content">
+
+                <h6>Dropzone JS Upload</h6>
+                <br>
+
+                <div id="dropzone">
+                  <form action="/upload" class="dropzone needsclick dz-clickable" id="demo-upload">
+                    <div class="dz-message needsclick">
+                      Drop CSV file here or click to upload.
+                    </div>
+                  </form>
+                </div>
 
               </div> <!-- /card-content -->
             </div>
@@ -349,7 +384,7 @@
 
     </div> <!-- /body container -->
 
-    <!-- Add footer here - Reference current ScienceScape site for content -->
+    <!-- FOOTER -->
     <footer class="page-footer">
       <div class="container">
 
@@ -404,6 +439,9 @@
 
     <!-- Local source for noUiSlider.js -->
     <script src="js/nouislider.js"></script>
+
+    <!-- CDN source for Dropzone JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.2.0/dropzone.js"></script>
 
 
     <script type="text/javascript">
