@@ -378,6 +378,24 @@
           </div>
         </div> <!-- /row -->
 
+        <!-- TODO SIGMA JS Card Using Template Data -->
+        <div class="row">
+          <div class="col s12">
+            <div class="card">
+              <div class="card-content">
+
+                <h6>Sigma JS Graph</h6>
+                <br>
+
+                <div id="json-test-sigma-container"></div>
+
+
+
+              </div> <!-- /card-content -->
+            </div>
+          </div>
+        </div> <!-- /row -->
+
       </div> <!-- /section -->
 
       <!-- <div class="divider"> -->
@@ -405,7 +423,7 @@
           <div class="col s12 m4 underline">
             <h6>Related Tools:</h6>
             <a href="https://tools.medialab.sciences-po.fr/table2net/">Table2Net</a><br>
-            <p>If you want to get the citation network from the table with the DOI, you can use Table2Net in "citation" mode :)</p>
+            <p>If you want to get the citation network from the table with the DOI, you can use Table2Net in "citation" mode.</p>
             <a href="http://www.sebastian-grauwin.com/?page_id=492">BiblioTools</a><br>
             <p>BiblioTools was developed by Sebastian Grauwin for a similar purpose. It is dedicated to getting networks from Web of Science, and can deal a large mass of data.</p>
             <a href="http://gephi.org/">Gephi</a><br>
@@ -414,7 +432,7 @@
           <div class="col s12 m4 underline">
             <h6>Development:</h6>
             <p>Originally developed by Mathieu Jacomy at the <a href="http://medialab.sciences-po.fr/">Sciences-Po Medialab</a>.</p>
-            <p>Refreshed, refactored and tuned up by The Kodokans in March 2018, a second year undergraduate computer science team from <a href="https://www.kcl.ac.uk/">King's College London</a>.</p>
+            <p>Refreshed, refactored and tuned up by <a href="#">The Kodokans</a> in March 2018, a second year undergraduate computer science team from <a href="https://www.kcl.ac.uk/">King's College London</a>.</p>
             <!-- TODO Add modal with more info about The Kodokans and links to our respective sites -->
           </div>
         </div>
@@ -434,14 +452,19 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-    <!-- CDN source for particles-js -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-
     <!-- Local source for noUiSlider.js -->
-    <script src="js/nouislider.js"></script>
+    <script type="text/javascript" src="js/nouislider.js"></script>
+
+    <!-- CDN source for Sigma JS -->
+    <script type="text/javascript" src="js/sigma/sigma.min.js"></script>
+    <!-- Local source for Sigma JS JSON Parser -->
+    <script type="text/javascript" src="js/sigma/plugins/sigma.parsers.json.min.js"></script>
+
+    <!-- CDN source for particles-js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
     <!-- CDN source for Dropzone JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.2.0/dropzone.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.2.0/dropzone.js"></script>
 
 
     <script type="text/javascript">
@@ -475,6 +498,16 @@
        decimals: 0
      })
     });
+    </script>
+
+    <!-- Sigma JS Test Data -->
+    <script>
+      sigma.parsers.json('/json/json-test-sigma.json', {
+        container: 'json-test-sigma-container',
+        settings: {
+          defaultNodeColor: '#ec5148'
+        }
+      });
     </script>
 
   </body>
