@@ -25,6 +25,8 @@ html h1 {
   font-size: 4em;
 }
 
+/* NAVIGATION & MENU */
+
 nav {
   background-color: rgba(184, 28, 28, 0.85) !important;
 }
@@ -41,7 +43,8 @@ nav .dropdown-content li {
   background-color: rgba(159, 0, 0, 0.92) !important;
 }
 
-nav .dropdown-content li:hover {
+nav .dropdown-content li:hover,
+.side-nav li:hover {
   background-color: rgba(134, 0, 0, 0.91) !important;
 }
 
@@ -59,6 +62,19 @@ nav .dropdown-content  a {
   background-color: #0D47A1 !important;
   color: white;
 }
+
+/* SIDE NAV */
+
+.side-nav {
+  background-color: #a90404c7;
+}
+
+.side-nav li>a,
+.side-nav li>a>i {
+  color: white !important;
+}
+
+
 
 .tagline {
   text-shadow: 1px 1px 8px #000000;
