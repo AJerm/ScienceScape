@@ -26,15 +26,70 @@
 
     <div id="particles-js"></div>
 
+    <!-- TODO Add navagation -->
+    <div class="navbar-fixed">
+      <nav>
+
+        <div class="nav-wrapper">
+          <!-- Activation link for mobile Nav - Needs extra side-nav HTML and JS initialiation within the page's $( document ).ready(function(){}) -->
+          <a href="#" data-activates="nav-mobile-version" class="button-collapse"><i class="material-icons">menu</i></a>
+          <h1 id="nav-h1"><a href="#" class="brand-logo center">ScienceScape</a></h1>
+            <ul class="left hide-on-med-and-down">
+              <li><a href="#!" class="btn" id="nav-login-btn">Upload</a></li>
+              <li><a href="#!" class="dropdown-button nav-dropdown" data-activates="dropdown-components">Components</a></li>
+              <li><a href="#!">Demo</a></li>
+              <li><a href="#!">Help</a></li>
+              <li><a href="#!" class="dropdown-button nav-dropdown" data-activates="dropdown-about">About</a></li> <!-- Dropdown Trigger -->
+            </ul>
+
+              <!-- Dropdown content for About -->
+              <ul id="dropdown-about" class="dropdown-content">
+                <li><a href="#!">Built With</a></li>
+                <li><a href="#!">Built By</a></li>
+                <li><a href="#!">Acknowledgements</a></li>
+                <li><a href="#!">Related Tools</a></li>
+              </ul>
+              <!-- Dropdown content for Components -->
+              <ul id="dropdown-components" class="dropdown-content">
+                <li><a href="#!">Navigation Only</a></li>
+                <li><a href="#!">Login Box</a></li>
+                <li><a href="#!">Graph Card Template</a></li>
+                <li><a href="#!">Button w/ Dropdown Menu</a></li>
+                <li><a href="#!">Single Item Form Select</a></li>
+                <li><a href="#!">Range Selector</a></li>
+                <li><a href="#!">Standard From Upload</a></li>
+                <li><a href="#!">Dropzone Upload</a></li>
+                <li><a href="#!">Sigma JS Card</a></li>
+                <li><a href="#!">Search</a></li>
+              </ul>
+        </div>
+
+      </nav>
+    </div> <!-- /.navbar-fixed -->
+
+    <!-- Side nav menu for small screens - Needs to be outside navbar-fixed -->
+    <div>
+      <ul class="side-nav" id="nav-mobile-version">
+        <li><a href="#!"><i class="material-icons left">home</i>Home</a></li>
+        <li><a href="#!">Components</a></li>
+        <li><a href="#!">Demo</a></li>
+        <li><a href="#!">Help</a></li>
+        <li><a href="#!">About</a></li>
+      </ul>
+    </div>
+
     <div class="container"> <!-- Page content to go within container -->
 
-      <!-- TODO Add navagation -->
+
 
       <!-- TODO Add Side Menu  -->
 
-      <h1 class="white-text center" style="max-width:100%">ScienceScape</h1>
-
-      <div class="divider"></div>
+      <!-- <h1 class="white-text center" style="max-width:100%">ScienceScape</h1> -->
+      <div class="section"></div>
+      <h6 class="white-text center tagline">Helpers for scientometrics.
+        <br>Convert files, get networks and visualize stuff from Scopus or Web of Knowledge.</h6>
+      <br>
+      <!-- <div class="divider"></div> -->
 
       <div class="section">
 
@@ -42,7 +97,7 @@
         <div class="blue lighten-2 white-text">Some text in a div</div>
         <div class="purple white-text">Some text in a div</div> -->
 
-        <!-- TODO Add Login / Register / Proceed As Guest buttons within accordian -->
+        <!-- Login / Register / Proceed As Guest buttons within accordian -->
         <!-- Collapsible elements only need initialization if they are added dynamically.
         You can also pass in options inside the initialization,
         however this can be done in the HTML markup as well. -->
@@ -139,7 +194,7 @@
                 <p>Visualize and download networks of keywords and/or authors and/or journals, and more.</p>
               </div>
               <div class="card-action">
-                <a class="waves-effect waves-light btn blue darken-4">Select</a>
+                <a class="waves-effect waves-light btn graph-select">Select</a>
               </div>
             </div>
           </div><!-- /card col -->
@@ -155,7 +210,7 @@
                 <p>Visualize and download networks using a landscape of references.</p>
               </div>
               <div class="card-action">
-                <a class="waves-effect waves-light btn blue darken-4">Select</a>
+                <a class="waves-effect waves-light btn graph-select">Select</a>
               </div>
             </div>
           </div><!-- /card col -->
@@ -171,7 +226,7 @@
                 <p>Visualize how many papers are published each year in your file.</p>
               </div>
               <div class="card-action">
-                <a class="waves-effect waves-light btn blue darken-4">Select</a>
+                <a class="waves-effect waves-light btn graph-select">Select</a>
               </div>
             </div>
           </div><!-- /card col -->
@@ -191,7 +246,7 @@
                 <p>Visualize and download the journals publishing the most papers over time in your file.</p>
               </div>
               <div class="card-action">
-                <a class="waves-effect waves-light btn blue darken-4">Select</a>
+                <a class="waves-effect waves-light btn graph-select">Select</a>
               </div>
             </div>
           </div><!-- /card col -->
@@ -207,7 +262,7 @@
                 <p>Visualize and download the use of each keyword over time in your file.</p>
               </div>
               <div class="card-action">
-                <a class="waves-effect waves-light btn blue darken-4">Select</a>
+                <a class="waves-effect waves-light btn graph-select">Select</a>
               </div>
             </div>
           </div><!-- /card col -->
@@ -223,7 +278,7 @@
                 <p>Visualize the main authors, keywords, journals, and how they are related, as a Sankey diagram.</p>
               </div>
               <div class="card-action">
-                <a class="waves-effect waves-light btn blue darken-4">Select</a>
+                <a class="waves-effect waves-light btn graph-select">Select</a>
               </div>
             </div>
           </div><!-- /card col -->
@@ -475,10 +530,11 @@
                        });
     </script>
 
-    <!-- Initialise form drop down select -->
+    <!-- Code to execute on page load -->
     <script type="text/javascript">
       $(document).ready(function() {
-        $('select').material_select();
+        $('select').material_select();    <!-- Initialise form drop down select -->
+        $(".button-collapse").sideNav();  <!-- Initialise the side navigation on small screens -->
       })
     </script>
 
@@ -505,9 +561,24 @@
       sigma.parsers.json('/json/json-test-sigma.json', {
         container: 'json-test-sigma-container',
         settings: {
-          defaultNodeColor: '#ec5148'
+          defaultNodeColor: '#0D47A1'
         }
       });
+    </script>
+
+    <!-- Additional Dropown Navigation Initialisation Settings -->
+    <script>
+    $('.nav-dropdown').dropdown({
+      inDuration: 300,
+      outDuration: 600,
+      constrainWidth: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: true, // Displays dropdown below the button
+      alignment: 'left', // Displays dropdown with edge aligned to the left of button
+      stopPropagation: false // Stops event propagation
+      }
+    );
     </script>
 
   </body>
