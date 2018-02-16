@@ -35,6 +35,8 @@ nav {
   margin: 0;
 }
 
+
+
 nav .dropdown-content {
   background-color: transparent;
 }
@@ -43,9 +45,47 @@ nav .dropdown-content li {
   background-color: rgba(159, 0, 0, 0.92) !important;
 }
 
-nav .dropdown-content li:hover,
+.side-nav .collapsible-body,
+.side-nav.fixed .collapsible-body {
+  background-color: transparent;
+}
+
+/* Expanded accordian background */
+.side-nav li.active {
+  background-color: transparent;
+}
+
+.side-nav .collapsible-header,
+.side-nav.fixed .collapsible-header {
+  padding: 0 32px;
+}
+
+.side-nav .collapsible-body li a,
+.side-nav.fixed .collapsible-body li a {
+  padding-left: 50px;
+}
+
+
 .side-nav li:hover {
+  /* background-color: transparent; */
+}
+
+.side-nav li.active:hover,
+.side-nav.fixed li.active:hover {
+  background-color: transparent !important;
+}
+
+
+.side-nav .collapsible-header:hover,
+.side-nav.fixed .collapsible-header:hover,
+.side-nav .collapsible-body li:hover,
+.side-nav.fixed .collapsible-body li:hover {
   background-color: rgba(134, 0, 0, 0.91) !important;
+}
+
+nav .dropdown-content li.top-level:hover,
+.side-nav li.top-level:hover {
+  background-color: rgba(134, 0, 0, 0.91);
 }
 
 nav .dropdown-content  a {
@@ -117,6 +157,23 @@ nav .dropdown-content  a {
 
 .page-footer .underline a {
   text-decoration: underline !important;
+}
+
+#logo-home img {
+  width: 150px;
+  height: 150px;
+  padding-bottom: 20px;
+}
+
+.side-nav .user-view img {
+  height: 70px;
+  width: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.side-nav .user-view {
+  margin-top: 20px;
 }
 
 /* TODo Make more specific to cards, vs nav */

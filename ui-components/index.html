@@ -14,8 +14,6 @@
     <!-- Import custom styling CSS -->
     <link rel="stylesheet" href="css/extra.css">
 
-
-
     <!-- Let browser know website is optimised for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -26,10 +24,9 @@
 
     <div id="particles-js"></div>
 
-    <!-- TODO Add navagation -->
+    <!-- TODO NAVIGATION & MENU -->
     <div class="navbar-fixed">
       <nav>
-
         <div class="nav-wrapper">
           <!-- Activation link for mobile Nav - Needs extra side-nav HTML and JS initialiation within the page's $( document ).ready(function(){}) -->
           <a href="#" data-activates="nav-mobile-version" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -66,45 +63,81 @@
                 <li><a href="#!" class="waves-effect waves-light">Sigma JS Card</a></li>
                 <li><a href="#!" class="waves-effect waves-light">Search</a></li>
               </ul>
-        </div>
-
+        </div><!-- /.nav-wrapper -->
       </nav>
     </div> <!-- /.navbar-fixed -->
 
-    <!-- Side nav menu for small screens - Needs to be outside navbar-fixed -->
+    <!-- TODO SIDE MENU - For small screens - Needs to be outside navbar-fixed -->
     <div>
       <ul class="side-nav" id="nav-mobile-version">
-        <li><a href="#!" class="waves-effect waves-light">Home<i class="material-icons">home</i></a></li>
-        <li><a href="#!" class="waves-effect waves-light">Components<i class="material-icons"></i></a></li>
-        <li><a href="#!" class="waves-effect waves-light">Demo<i class="material-icons"></i></a></li>
-        <li><a href="#!" class="waves-effect waves-light">Help<i class="material-icons"></i></a></li>
-        <li><a href="#!" class="waves-effect waves-light">About<i class="material-icons"></i></a></li>
+        <li>
+          <div class="user-view" style="height:100px">
+            <div class="background valign-wrapper">
+              <img src="images/vectorised-logo-outline-white.svg" alt="ScienceScape Logo">
+            </div>
+          </div>
+        </li>
+        <li class="top-level"><a href="#!" class="waves-effect waves-light">Home<i class="material-icons">home</i></a></li>
+        <li>
+
+          <!-- Collapsible Side Nav Component -->
+          <ul class="collapsible collapsible-accordion">
+            <li>
+              <!-- Top Level Accordian Header -->
+              <a href="#!" class="collapsible-header waves-effect waves-light">Components<i class="material-icons">view_module</i><i class="material-icons right">keyboard_arrow_down</i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="#!" class="waves-effect waves-light">Component 1<i class="material-icons"></i></a></li>
+                  <li><a href="#!" class="waves-effect waves-light">Component 2<i class="material-icons"></i></a></li>
+                  <li><a href="#!" class="waves-effect waves-light">Component 3<i class="material-icons"></i></a></li>
+                  <li><a href="#!" class="waves-effect waves-light">Component 4<i class="material-icons"></i></a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+        <li class="top-level"><a href="#!" class="waves-effect waves-light">Demo<i class="material-icons">mouse</i></a></li>
+        <li class="top-level"><a href="#!" class="waves-effect waves-light">Help<i class="material-icons">help</i></a></li>
+        <li>
+
+          <!-- Collapsible Side Nav Component -->
+          <ul class="collapsible collapsible-accordion">
+            <li>
+              <!-- Top Level Accordian Header -->
+              <a href="#!" class="collapsible-header waves-effect waves-light">About<i class="material-icons">info</i><i class="material-icons right">keyboard_arrow_down</i></a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href="#!" class="waves-effect waves-light">Built With<i class="material-icons"></i></a></li>
+                  <li><a href="#!" class="waves-effect waves-light">Built By<i class="material-icons"></i></a></li>
+                  <li><a href="#!" class="waves-effect waves-light">Acknowledgements<i class="material-icons"></i></a></li>
+                  <li><a href="#!" class="waves-effect waves-light">Related Tools<i class="material-icons"></i></a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+        </li>
+
+        <!-- <li class="top-level"><a href="#!" class="waves-effect waves-light">About<i class="material-icons">info</i></a></li> -->
       </ul>
     </div>
 
     <div class="container"> <!-- Page content to go within container -->
 
-
-
-      <!-- TODO Add Side Menu  -->
-
-      <!-- <h1 class="white-text center" style="max-width:100%">ScienceScape</h1> -->
       <div class="section"></div>
+
+      <div id="logo-home" class="center">
+        <img src="images/vectorised-logo-outline-white.svg" alt="ScienceScape Logo">
+      </div>
+
       <h6 class="white-text center tagline">Helpers for scientometrics.
         <br>Convert files, get networks and visualize stuff from Scopus or Web of Knowledge.</h6>
       <br>
+
       <!-- <div class="divider"></div> -->
 
       <div class="section">
 
-        <!-- <div class="red darken-4 white-text">Some text in a div</div>
-        <div class="blue lighten-2 white-text">Some text in a div</div>
-        <div class="purple white-text">Some text in a div</div> -->
-
-        <!-- Login / Register / Proceed As Guest buttons within accordian -->
-        <!-- Collapsible elements only need initialization if they are added dynamically.
-        You can also pass in options inside the initialization,
-        however this can be done in the HTML markup as well. -->
         <ul class="collapsible" data-collapsible="accordion">
           <li>
             <div class="collapsible-header"><i class="material-icons">person</i>Log In</div>
@@ -289,8 +322,6 @@
 
         </div> <!-- /row 1 -->
 
-
-
         <!-- Dropdown menu from a button -->
         <div class="row">
           <div class="col s12">
@@ -316,8 +347,6 @@
             </div>
           </div>
         </div> <!-- /row  -->
-
-
 
         <!-- TODO Add sample form selection boxes -->
         <!-- Single Item Form Select Drop Down -->
@@ -506,6 +535,9 @@
     </footer>
 
 
+<!-- ***************
+      JAVASCRIPT
+     ***************  -->
 
     <!-- Import jQuery before materialize.js -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
