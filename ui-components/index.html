@@ -588,39 +588,21 @@
     <!-- CDN source for Dropzone JS -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.2.0/dropzone.js"></script>
 
-
+  <!-- Particesl JS Initialisation -->
     <script type="text/javascript">
       particlesJS.load('particles-js',         // Param 1 - div ID
                        'json/particles.json',  // Param 2 - JSON settings
-                       function() {            // Param 3 - Function to fire after loading JSON
-                         console.log('particles.json loaded');
-                       });
+                       function () {            // Param 3 - Function to fire after loading JSON
+                        console.log('particles.json loaded');
+                      });
     </script>
 
-    <!-- Code to execute on page load -->
+    <!-- Code to execute onÒ page load -->
     <script type="text/javascript">
-      $(document).ready(function() {
-        $('select').material_select();    <!-- Initialise form drop down select -->
-        $(".button-collapse").sideNav();  <!-- Initialise the side navigation on small screens -->
-      })
-    </script>
-
-    <!-- Initialise noUiSlider -->
-    <script type="text/javascript">
-    var slider = document.getElementById('range-slider');
-    noUiSlider.create(slider, {
-     start: [1950, 2000],
-     connect: true,
-     step: 1,
-     orientation: 'horizontal',
-     range: {
-       'min': 1900,
-       'max': 2030
-     },
-     format: wNumb({
-       decimals: 0
-     })
-    });
+      $(document).ready(function () {
+        $('select').material_select();    //  Initialise form drop down select
+        $('.button-collapse').sideNav();  //  Initialise the side navigation on small screens
+      });
     </script>
 
     <!-- Sigma JS Test Data -->
@@ -628,22 +610,54 @@
       sigma.parsers.json('/json/json-test-sigma.json', {
         container: 'json-test-sigma-container',
         settings: {
-          defaultNodeColor: '#0D47A1'
-        }
+          defaultNodeColor: '#0D47A1',
+        },
       });
     </script>
 
     <!-- Additional Dropown Navigation Initialisation Settings -->
     <script>
-      $('.nav-dropdown').dropdown({
-        inDuration: 300,
-        outDuration: 600,
-        constrainWidth: false, // Does not change width of dropdown to that of the activator
-        hover: true, // Activate on hover
-        gutter: 0, // Spacing from edge
-        belowOrigin: true, // Displays dropdown below the button
-        alignment: 'left', // Displays dropdown with edge aligned to the left of button
-        stopPropagation: false // Stops event propagation
+    $('.nav-dropdown').dropdown({
+      inDuration: 300,
+      outDuration: 600,
+      constrainWidth: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: true, // Displays dropdown below the button
+      alignment: 'left', // Displays dropdown with edge aligned to the left of button
+      stopPropagation: false, // Stops event propagation
+    });
+
+    </script>
+
+    <!-- Getting Sub Nav Tab Links to Work Outside Of Tab Menu -->
+    <script>
+      $(document).ready(function () {
+        $('ul.tabs').tabs();
+        $('#nav-menu-built-with').click(function () {
+          $('ul.tabs').tabs('select_tab', 'built-with');
+        });
+      });
+
+      $(document).ready(function () {
+        $('ul.tabs').tabs();
+        $('#nav-menu-built-by').click(function () {
+          $('ul.tabs').tabs('select_tab', 'built-by');
+        });
+      });
+
+      $(document).ready(function () {
+        $('ul.tabs').tabs();
+        $('#nav-menu-acknowledgements').click(function () {
+          $('ul.tabs').tabs('select_tab', 'acknowledgements');
+        });
+      });
+
+      $(document).ready(function () {
+        $('ul.tabs').tabs();
+        $('#nav-menu-related-tools').click(function () {
+          $('ul.tabs').tabs('select_tab', 'related-tools');
+        });
       });
     </script>
 

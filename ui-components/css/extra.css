@@ -2,7 +2,8 @@
   COLOR PALETTE
 ********************/
 
-/* TODO: Complete Color Palette and replace hard coded colours with variables */
+/* TODO: Complete Color Palette and replace hard coded colours with variables
+         Use Pigment: Find Colors to do so */
 
 /*  SCSS Variable decaration:   $brandColor: #0D47A1; */
 /*  CSS Variable declarations - Need to go in class or element tags */
@@ -26,7 +27,12 @@ p {
 --color-one: rgb(230, 60, 75);
 --color-two: rgb(208, 137, 0);
 
+--some-color: #ffffff;
+--some-color: #ffffff;
 --some-color: #ffffff; */
+
+
+
 
 
 /*******************
@@ -54,12 +60,12 @@ html h1 {
   text-shadow: 2px 2px 5px #780000;
   font-size: 4em;
 }
-
+/*
 h1, h2, h3, h4, h5, h6 {
-  /* color: white; */
-  /* text-shadow: 1px 1px 8px #000000; */
-  /* font-weight: lighter; */
-}
+  color: white;
+  text-shadow: 1px 1px 8px #000000;
+  font-weight: lighter;
+} */
 
 p {
   color: white;
