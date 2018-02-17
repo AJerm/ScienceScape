@@ -1,10 +1,32 @@
 /*******************
-  COLOR SCHEME
+  COLOR PALETTE
 ********************/
 
-@somecolor: #eff1f5;
-@color1: #0dff00;
+/* TODO: Complete Color Palette and replace hard coded colours with variables */
 
+/*  SCSS Variable decaration:   $brandColor: #0D47A1; */
+/*  CSS Variable declarations - Need to go in class or element tags */
+
+p {
+  --red-text-shadow: #780000;
+}
+
+/* --nav-background-color: rgba(159, 0, 0, 0.92);
+--nav-dropdown-color: rgba(159, 0, 0, 0.92);
+
+--side-nav-hover-color: background-color: rgba(134, 0, 0, 0.91); // Maybe use darken function?
+
+--text-white: white;
+--card-text: black;
+
+--blue-btn-hover: #0D47A1;
+--blue-btn-outline: #0D47A1;
+--blue-btn-highlight: #81acee;
+
+--color-one: rgb(230, 60, 75);
+--color-two: rgb(208, 137, 0);
+
+--some-color: #ffffff; */
 
 
 /*******************
@@ -16,7 +38,6 @@
   height: 400px;
   margin: auto;
 }
-
 
 /*******************
   MATERIALIZE CSS
@@ -35,9 +56,9 @@ html h1 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: white;
-  text-shadow: 1px 1px 8px #000000;
-  font-weight: lighter;
+  /* color: white; */
+  /* text-shadow: 1px 1px 8px #000000; */
+  /* font-weight: lighter; */
 }
 
 p {
