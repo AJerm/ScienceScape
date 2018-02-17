@@ -1,4 +1,13 @@
 /*******************
+  COLOR SCHEME
+********************/
+
+@somecolor: #eff1f5;
+@color1: #0dff00;
+
+
+
+/*******************
   SIGMA JS
 ********************/
 
@@ -23,6 +32,20 @@ html h1 {
   font-style: italic;
   text-shadow: 2px 2px 5px #780000;
   font-size: 4em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+  text-shadow: 1px 1px 8px #000000;
+  font-weight: lighter;
+}
+
+p {
+  color: white;
+}
+
+a {
+ color: white;
 }
 
 /* NAVIGATION & MENU */
@@ -151,9 +174,6 @@ nav .dropdown-content  a {
   color: rgb(238, 238, 238);
 }
 
-.page-footer a {
-  color: white;
-}
 
 .page-footer .underline a {
   text-decoration: underline !important;
@@ -173,6 +193,10 @@ nav .dropdown-content  a {
 }
 
 .side-nav .user-view {
+  margin-top: 20px;
+}
+
+.tabbed-page-container {
   margin-top: 20px;
 }
 
