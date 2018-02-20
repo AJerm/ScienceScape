@@ -68,11 +68,31 @@ h1, h2, h3, h4, h5, h6 {
 } */
 
 p {
-  color: white;
+  /* color: white; */
 }
 
 a {
- color: white;
+ /* color: white; */
+}
+
+
+.about h1, h2, h3, h4, h5, h6 {
+  color: white;
+  text-shadow: 1px 1px 8px #000000;
+  font-weight: lighter;
+}
+
+.about-intro {
+  color: white;
+}
+
+.about-intro a {
+  color: white;
+  text-decoration: underline;
+}
+
+footer a {
+  color: white;
 }
 
 /* NAVIGATION & MENU */
@@ -257,6 +277,25 @@ nav .dropdown-content  a {
 
 .switch label input[type=checkbox]:checked+.lever:after {
   background-color: #0D47A1;
+}
+
+/*******************
+  About Page
+********************/
+
+/* Fontawesome */
+
+.fa,
+.fab {
+  font-size: 14pt;
+}
+
+.fas {
+  font-size: 13pt;
+}
+
+.the-codokans li img {
+  margin-top: 10px;
 }
 
 /*******************

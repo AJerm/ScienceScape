@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.2.0/dropzone.css">
     <!-- Import custom styling CSS -->
     <link rel="stylesheet" href="css/extra.css">
+    <!-- Import Fontawesome CSS -->
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
     <!-- Let browser know website is optimised for mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -28,7 +30,7 @@
         <div class="nav-wrapper">
           <!-- Activation link for mobile Nav - Needs extra side-nav HTML and JS initialiation within the page's $( document ).ready(function(){}) -->
           <a href="#" data-activates="nav-mobile-version" class="button-collapse"><i class="material-icons">menu</i></a>
-          <h1 id="nav-h1"><a href="#" class="brand-logo center">ScienceScape</a></h1>
+          <h1 id="nav-h1"><a href="/" class="brand-logo center">ScienceScape</a></h1>
 
             <ul class="left hide-on-med-and-down"> <!-- Left Menu -->
               <li><a href="#!" class="btn waves-effect waves-lighten" id="nav-login-btn">Upload</a></li>
@@ -63,6 +65,7 @@
               </ul>
               <!-- SUB NAV Tab Content -->
               <!-- TODO: Enable jumping back to top of page on tab click -->
+              <!-- TODO: Fix home logo link on tabbed pages -->
               <div class="nav-content">
                 <ul class="tabs tabs-transparent">
                   <li class="tab"><a href="#built-with">Built With</a></li>
@@ -161,12 +164,198 @@
         <!-- Tab 2 -->
         <div id="built-by">
           <h3 class="center">Built By</h3>
+          <section class="about-intro">
+            <h6 class="white-text center tagline">The Codokans</h6>
+            <br>
+            <p>Originally developed by Mathieu Jacomy at the <a href="http://medialab.sciences-po.fr/">Sciences-Po Medialab</a>.</p>
+            <p>Refreshed, refactored and tuned up by <a href="#">The Kodokans</a> in March 2018, a second year undergraduate computer science team from <a href="https://www.kcl.ac.uk/">King's College London</a>.</p>
+          </section>
 
-          <h6 class="white-text center tagline">Some Tagline</h6>
-          <br>
-          <p>Originally developed by Mathieu Jacomy at the <a href="http://medialab.sciences-po.fr/">Sciences-Po Medialab</a>.</p>
-          <p>Refreshed, refactored and tuned up by <a href="#">The Kodokans</a> in March 2018, a second year undergraduate computer science team from <a href="https://www.kcl.ac.uk/">King's College London</a>.</p>
-          <!-- TODO Add modal with more info about The Kodokans and links to our respective sites -->
+          <!-- TODO Add modal with more info about The Codokans and links to our respective sites -->
+
+          <ul class="collection the-codokans">
+            <!-- Team Member 1 -->
+            <li class="collection-item avatar">
+              <div class="row">
+                <div class="col s3">
+                  <img src="images/the-codokans/alex-jermstad-1.jpg" alt="Alex Jermstad" class="circle">
+                  <span class="title">Alex Jermstad</span>
+                  <p>
+                    <a href="https://www.twitter.com/ajermstad"><i class="fab fa-twitter tooltipped" data-position="bottom" data-delay="0" data-tooltip="Twitter"></i></a>
+                    <a href="#!"><i class="fab fa-linkedin-in tooltipped" data-position="bottom" data-delay="0" data-tooltip="LinkedIn"></i></a>
+                  </p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">code</i></a>
+                </div>
+                <div class="col s1"><i class="material-icons tooltipped" data-position="bottom" data-delay="0" data-tooltip="Designed with Materialize CSS & Patricles JS">brush</i></div>
+                <div class="col s1"><i class="material-icons tooltipped" data-position="bottom" data-delay="0" data-tooltip="Sigma JS">timeline</i></div>
+                <div class="col s1"><i class="fab fa-js-square tooltipped" data-position="bottom" data-delay="0" data-tooltip="Django & Javascript"></i></div>
+                <div class="col s1"><i class="fas fa-code-branch tooltipped" data-position="bottom" data-delay="0" data-tooltip="Sigma JS"></i></div>
+                <div class="col s1"><i class="fab fa-css3 tooltipped" data-position="bottom" data-delay="0" data-tooltip="CSS"></i></div>
+                <div class="col s1"><i class="fab fa-html5 tooltipped" data-position="bottom" data-delay="0" data-tooltip="HTML 5"></i></div>
+
+              </div>
+            </li>
+            <!-- Team Member 2 -->
+            <li class="collection-item avatar">
+              <div class="row">
+                <div class="col s3">
+                  <img src="images/the-codokans/shayne-alchoon-1.jpg" alt="Shayne Alchoon" class="circle">
+                  <span class="title">Shayne Alchoon</span>
+                  <p>
+                    <a href="#!"><i class="fab fa-twitter tooltipped" data-position="bottom" data-delay="0" data-tooltip="Twitter"></i></a>
+                    <a href="#!"><i class="fab fa-linkedin-in tooltipped" data-position="bottom" data-delay="0" data-tooltip="LinkedIn"></i></a>
+                  </p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">code</i></a>
+                </div>
+                <div class="col s1"><i class="fab fa-js-square tooltipped" data-position="bottom" data-delay="0" data-tooltip="Django"></i></div>
+                <div class="col s1"><i class="material-icons tooltipped" data-position="bottom" data-delay="0" data-tooltip="Sigma JS">timeline</i></div>
+                <div class="col s1"><i class="fas fa-upload tooltipped" data-position="bottom" data-delay="0" data-tooltip="Heroku Deployment"></i></div>
+                <div class="col s1"><i class="material-icons tooltipped" data-position="bottom" data-delay="0" data-tooltip="Bug Extermination">bug_report</i></div>
+                <div class="col s1"><i class="far fa-check-square tooltipped" data-position="bottom" data-delay="0" data-tooltip="Testing"></i></div>
+                <div class="col s1"><i class="fas fa-database tooltipped" data-position="bottom" data-delay="0" data-tooltip="Database Design"></i></div>
+              </div>
+            </li>
+            <!-- Team Member 3 -->
+            <li class="collection-item avatar">
+              <div class="row">
+                <div class="col s3">
+                  <img src="images/the-codokans/britton-forsyth-1.jpg" alt="Britton Forsyth" class="circle">
+                  <span class="title">Britton Forsyth</span>
+                  <p>
+                    <a href="#!"><i class="fab fa-twitter tooltipped" data-position="bottom" data-delay="0" data-tooltip="Twitter"></i></a>
+                    <a href="#!"><i class="fab fa-linkedin-in tooltipped" data-position="bottom" data-delay="0" data-tooltip="LinkedIn"></i></a>
+                  </p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">code</i></a>
+                </div>
+                <div class="col s1"><i class="fab fa-js-square tooltipped" data-position="bottom" data-delay="0" data-tooltip="Django"></i></div>
+                <div class="col s1"><i class="material-icons tooltipped" data-position="bottom" data-delay="0" data-tooltip="Sigma JS">timeline</i></div>
+                <div class="col s1"><i class="fas fa-upload tooltipped" data-position="bottom" data-delay="0" data-tooltip="Heroku Deployment"></i></div>
+                <div class="col s1"><i class="material-icons tooltipped" data-position="bottom" data-delay="0" data-tooltip="Bug Extermination">bug_report</i></div>
+                <div class="col s1"><i class="far fa-check-square tooltipped" data-position="bottom" data-delay="0" data-tooltip="Testing"></i></div>
+                <div class="col s1"><i class="fas fa-database tooltipped" data-position="bottom" data-delay="0" data-tooltip="Database Design"></i></div>
+              </div>
+            </li>
+            <!-- Team Member 4 -->
+            <li class="collection-item avatar">
+              <div class="row">
+                <div class="col s3">
+                  <img src="images/the-codokans/jack-hinshelwood-1.jpg" alt="Jack Hinshelwood" class="circle">
+                  <span class="title">Jack Hinshelwood</span>
+                  <p>
+                    <a href="#!"><i class="fab fa-twitter tooltipped" data-position="bottom" data-delay="0" data-tooltip="Twitter"></i></a>
+                    <a href="#!"><i class="fab fa-linkedin-in tooltipped" data-position="bottom" data-delay="0" data-tooltip="LinkedIn"></i></a>
+                  </p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">code</i></a>
+                </div>
+                <div class="col s1"><i class="fab fa-js-square tooltipped" data-position="bottom" data-delay="0" data-tooltip="Django"></i></div>
+                <div class="col s1"><i class="material-icons tooltipped" data-position="bottom" data-delay="0" data-tooltip="Sigma JS">timeline</i></div>
+                <div class="col s1"><i class="fas fa-upload tooltipped" data-position="bottom" data-delay="0" data-tooltip="Heroku Deployment"></i></div>
+                <div class="col s1"><i class="material-icons tooltipped" data-position="bottom" data-delay="0" data-tooltip="Bug Extermination">bug_report</i></div>
+                <div class="col s1"><i class="far fa-check-square tooltipped" data-position="bottom" data-delay="0" data-tooltip="Testing"></i></div>
+                <div class="col s1"><i class="fas fa-database tooltipped" data-position="bottom" data-delay="0" data-tooltip="Database Design"></i></div>
+              </div>
+            </li>
+            <!-- Team Member 5 -->
+            <li class="collection-item avatar">
+              <div class="row">
+                <div class="col s3">
+                  <img src="images/the-codokans/nathan-felix-1.jpg" alt="Nathan Felix" class="circle">
+                  <span class="title">Nathan Felix</span>
+                  <p>
+                    <a href="#!"><i class="fab fa-twitter tooltipped" data-position="bottom" data-delay="0" data-tooltip="Twitter"></i></a>
+                    <a href="#!"><i class="fab fa-linkedin-in tooltipped" data-position="bottom" data-delay="0" data-tooltip="LinkedIn"></i></a>
+                  </p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">code</i></a>
+                </div>
+                <div class="col s1"><i class="fab fa-js-square tooltipped" data-position="bottom" data-delay="0" data-tooltip="Django"></i></div>
+                <div class="col s1"><i class="material-icons tooltipped" data-position="bottom" data-delay="0" data-tooltip="Sigma JS">timeline</i></div>
+                <div class="col s1"><i class="fas fa-upload tooltipped" data-position="bottom" data-delay="0" data-tooltip="Heroku Deployment"></i></div>
+                <div class="col s1"><i class="material-icons tooltipped" data-position="bottom" data-delay="0" data-tooltip="Bug Extermination">bug_report</i></div>
+                <div class="col s1"><i class="far fa-check-square tooltipped" data-position="bottom" data-delay="0" data-tooltip="Testing"></i></div>
+                <div class="col s1"><i class="fas fa-database tooltipped" data-position="bottom" data-delay="0" data-tooltip="Database Design"></i></div>
+              </div>
+            </li>
+            <!-- Team Member 6 -->
+            <li class="collection-item avatar">
+              <div class="row">
+                <div class="col s3">
+                  <img src="images/the-codokans/nicolas-volken-1.jpg" alt="Nicolas Volken" class="circle">
+                  <span class="title">Nicolas Volken</span>
+                  <p>
+                    <a href="#!"><i class="fab fa-twitter tooltipped" data-position="bottom" data-delay="0" data-tooltip="Twitter"></i></a>
+                    <a href="#!"><i class="fab fa-linkedin-in tooltipped" data-position="bottom" data-delay="0" data-tooltip="LinkedIn"></i></a>
+                  </p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">code</i></a>
+                </div>
+                <div class="col s1"><i class="fab fa-js-square tooltipped" data-position="bottom" data-delay="0" data-tooltip="Django"></i></div>
+                <div class="col s1"><i class="material-icons tooltipped" data-position="bottom" data-delay="0" data-tooltip="Sigma JS">timeline</i></div>
+                <div class="col s1"><i class="fas fa-upload tooltipped" data-position="bottom" data-delay="0" data-tooltip="Heroku Deployment"></i></div>
+                <div class="col s1"><i class="material-icons tooltipped" data-position="bottom" data-delay="0" data-tooltip="Bug Extermination">bug_report</i></div>
+                <div class="col s1"><i class="far fa-check-square tooltipped" data-position="bottom" data-delay="0" data-tooltip="Testing"></i></div>
+                <div class="col s1"><i class="fas fa-database tooltipped" data-position="bottom" data-delay="0" data-tooltip="Database Design"></i></div>
+              </div>
+            </li>
+            <!-- Team Member 7 -->
+            <li class="collection-item avatar">
+              <div class="row">
+                <div class="col s3">
+                  <img src="images/the-codokans/paul-muresan-1.jpg" alt="Paul Muresan" class="circle">
+                  <span class="title">Paul Muresan</span>
+                  <p>
+                    <a href="#!"><i class="fab fa-twitter tooltipped" data-position="bottom" data-delay="0" data-tooltip="Twitter"></i></a>
+                    <a href="#!"><i class="fab fa-linkedin-in tooltipped" data-position="bottom" data-delay="0" data-tooltip="LinkedIn"></i></a>
+                  </p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">code</i></a>
+                </div>
+                <div class="col s1"><i class="fab fa-js-square tooltipped" data-position="bottom" data-delay="0" data-tooltip="Django"></i></div>
+                <div class="col s1"><i class="material-icons tooltipped" data-position="bottom" data-delay="0" data-tooltip="Sigma JS">timeline</i></div>
+                <div class="col s1"><i class="fas fa-upload tooltipped" data-position="bottom" data-delay="0" data-tooltip="Heroku Deployment"></i></div>
+                <div class="col s1"><i class="material-icons tooltipped" data-position="bottom" data-delay="0" data-tooltip="Bug Extermination">bug_report</i></div>
+                <div class="col s1"><i class="far fa-check-square tooltipped" data-position="bottom" data-delay="0" data-tooltip="Testing"></i></div>
+                <div class="col s1"><i class="fas fa-database tooltipped" data-position="bottom" data-delay="0" data-tooltip="Database Design"></i></div>
+              </div>
+            </li>
+            <!-- Team Member 8 -->
+            <li class="collection-item avatar">
+              <div class="row">
+                <div class="col s3">
+                  <img src="images/the-codokans/saadman-sakib-1.jpg" alt="Saadman Sakib" class="circle">
+                  <span class="title">Saadman Sakib</span>
+                  <p>
+                    <a href="#!"><i class="fab fa-twitter tooltipped" data-position="bottom" data-delay="0" data-tooltip="Twitter"></i></a>
+                    <a href="#!"><i class="fab fa-linkedin-in tooltipped" data-position="bottom" data-delay="0" data-tooltip="LinkedIn"></i></a>
+                  </p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">code</i></a>
+                </div>
+                <div class="col s1"><i class="fab fa-js-square tooltipped" data-position="bottom" data-delay="0" data-tooltip="Django"></i></div>
+                <div class="col s1"><i class="material-icons tooltipped" data-position="bottom" data-delay="0" data-tooltip="Sigma JS">timeline</i></div>
+                <div class="col s1"><i class="fas fa-upload tooltipped" data-position="bottom" data-delay="0" data-tooltip="Heroku Deployment"></i></div>
+                <div class="col s1"><i class="material-icons tooltipped" data-position="bottom" data-delay="0" data-tooltip="Bug Extermination">bug_report</i></div>
+                <div class="col s1"><i class="far fa-check-square tooltipped" data-position="bottom" data-delay="0" data-tooltip="Testing"></i></div>
+                <div class="col s1"><i class="fas fa-database tooltipped" data-position="bottom" data-delay="0" data-tooltip="Database Design"></i></div>
+              </div>
+            </li>
+            <!-- Team Member 9 -->
+            <li class="collection-item avatar">
+              <div class="row">
+                <div class="col s3">
+                  <img src="images/the-codokans/wonjoon-seol-1.jpg" alt="Wonjoon Seol" class="circle">
+                  <span class="title">Wonjoon Seol</span>
+                  <p>
+                    <a href="#!"><i class="fab fa-twitter tooltipped" data-position="bottom" data-delay="0" data-tooltip="Twitter"></i></a>
+                    <a href="#!"><i class="fab fa-linkedin-in tooltipped" data-position="bottom" data-delay="0" data-tooltip="LinkedIn"></i></a>
+                  </p>
+                  <a href="#!" class="secondary-content"><i class="material-icons">code</i></a>
+                </div>
+                <div class="col s1"><i class="fab fa-js-square tooltipped" data-position="bottom" data-delay="0" data-tooltip="Django"></i></div>
+                <div class="col s1"><i class="material-icons tooltipped" data-position="bottom" data-delay="0" data-tooltip="Sigma JS">timeline</i></div>
+                <div class="col s1"><i class="fas fa-upload tooltipped" data-position="bottom" data-delay="0" data-tooltip="Heroku Deployment"></i></div>
+                <div class="col s1"><i class="material-icons tooltipped" data-position="bottom" data-delay="0" data-tooltip="Bug Extermination">bug_report</i></div>
+                <div class="col s1"><i class="far fa-check-square tooltipped" data-position="bottom" data-delay="0" data-tooltip="Testing"></i></div>
+                <div class="col s1"><i class="fas fa-database tooltipped" data-position="bottom" data-delay="0" data-tooltip="Database Design"></i></div>
+              </div>
+            </li>
+          </ul>
         </div>
 
         <!-- Tab 3 -->
@@ -200,7 +389,7 @@
 
     <!-- FOOTER -->
     <footer class="page-footer">
-      <div class="container">
+      <div class="container about">
 
         <div class="row">
           <div class="col s12 m4">
@@ -211,6 +400,9 @@
             <a href="#">Materialize CSS</a><br>
             <a href="#">Particles.js</a><br>
             <a href="#">jQuery</a><br>
+            <a href="#">FontAwesome</a><br>
+            <a href="#">GitHub</a><br>
+            <a href="#">Slack</a><br>
             <a href="#">Heroku</a><br>
             <!-- TODO Add modal with CC atrribution for The Noun Project Icons -->
             <a href="https://thenounproject.com/">The Noun Project</a> - <a href="#">Attribution</a><br>
