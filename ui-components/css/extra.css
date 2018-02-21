@@ -76,7 +76,12 @@ a {
 }
 
 
-.about h1, h2, h3, h4, h5, h6 {
+.about h1,
+.about h2,
+.about h3,
+.about h4,
+.about h5,
+.about h6 {
   color: white;
   text-shadow: 1px 1px 8px #000000;
   font-weight: lighter;
@@ -86,7 +91,10 @@ a {
   color: white;
 }
 
-.about-intro a {
+.about-intro a,
+#built-with a,
+#related-tools a,
+#related-tools p  {
   color: white;
   text-decoration: underline;
 }
@@ -182,6 +190,27 @@ nav .dropdown-content  a {
 .side-nav li>a,
 .side-nav li>a>i {
   color: white !important;
+}
+
+/* TABS NAV */
+
+/* Enable full screen width tabs menu */
+.tabs {
+    display:-webkit-box !important;
+    display: -webkit-flex!important;
+    display: -ms-flexbox !important;
+    display: flex ! important;
+}
+
+.tabs .tab {
+    -webkit-box-flex: 1 !important;
+    -webkit-flex-grow: 1 !important;
+    -ms-flex-positive: 1 !important;
+    flex-grow: 1 !important;
+}
+
+.tabs .tab a {
+    padding: 0 12px !important;
 }
 
 
