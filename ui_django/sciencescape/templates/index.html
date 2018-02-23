@@ -1,0 +1,406 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block bodyContent %}
+
+<div class="container"> <!-- Page content to go within container -->
+
+  <div class="section"></div>
+
+  <div id="logo-home" class="center">
+    <img src="{% static 'images/vectorised-logo-outline-white.svg' %}" alt="ScienceScape Logo">
+  </div>
+
+  <h6 class="white-text center tagline">Helpers for scientometrics.
+    <br>Convert files, get networks and visualize stuff from Scopus or Web of Knowledge.</h6>
+  <br>
+
+  <!-- <div class="divider"></div> -->
+
+  <div class="section">
+
+    <ul class="collapsible" data-collapsible="accordion">
+      <li>
+        <div class="collapsible-header"><i class="material-icons">person</i>Log In</div>
+        <div class="collapsible-body white">
+
+          <!-- Login -->
+          <div class="row">
+            <form class="col s12">
+
+              <div class="input-field"</div>
+                <i class="material-icons prefix">person</i>
+                <input id="login-username" type="text" class="validate">
+                <label for="login-username">Username</label>
+              </div>
+
+              <div class="input-field"</div>
+                <i class="material-icons prefix">lock</i>
+                <input id="login-password" type="password" class="validate">
+                <label for="login-password">Password</label>
+              </div>
+
+              <button class="btn waves-effect waves-red blue darken-4" type="submit" name="login">Login</button>
+
+            </form>
+          </div>
+
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">person_add</i>Register</div>
+        <div class="collapsible-body white">
+
+        <!-- Register -->
+        <div class="row">
+          <form class="col s12">
+
+            <div class="input-field"</div>
+              <i class="material-icons prefix">email</i>
+              <input id="email" type="email" class="validate">
+              <label for="email">Email Address</label>
+            </div>
+
+            <div class="input-field"</div>
+              <i class="material-icons prefix">person</i>
+              <input id="register-username" type="text" class="validate">
+              <label for="register-username">Username</label>
+            </div>
+
+            <div class="input-field"</div>
+              <i class="material-icons prefix">lock</i>
+              <input id="password-register" type="password" class="validate">
+              <label for="password-register">Password</label>
+            </div>
+
+            <div class="input-field"</div>
+              <i class="material-icons prefix">lock</i>
+              <input id="password-confirm" type="password" class="validate">
+              <label for="password-confirm">Confirm Password</label>
+            </div>
+
+            <button class="btn waves-effect waves-red blue darken-4" type="register" name="login">Register</button>
+
+          </form>
+        </div>
+
+        </div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">person_outline</i>Proceed As Guest</div>
+        <div class="collapsible-body white">
+
+        <!-- Guest -->
+        <a class="waves-effect waves-red btn blue darken-4">Continue</a>
+
+        </div>
+      </li>
+    </ul>
+
+    <!-- Example of selection of analysis cards to choose from -->
+    <div class="row"> <!-- ROW 1 -->
+
+      <!-- Get Networks Card -->
+      <div class="col s12 m6 l4"> <!-- Full width on mobile, 2 per row medium, 3 per row large -->
+        <div class="card">
+          <div class="card-image margin-5">
+            <img src="{% static 'images/get-networks.svg' %}">
+          </div>
+          <div class="card-content">
+            <span class="card-title">Get Networks</span>
+            <p>Visualize and download networks of keywords and/or authors and/or journals, and more.</p>
+          </div>
+          <div class="card-action">
+            <a class="waves-effect waves-light btn graph-select">Select</a>
+          </div>
+        </div>
+      </div><!-- /card col -->
+
+      <!-- Reference Scape Card -->
+      <div class="col s12 m6 l4"> <!-- Full width on mobile, 2 per row medium, 3 per row large -->
+        <div class="card">
+          <div class="card-image margin-5">
+            <img src="{% static 'images/reference-scape.svg' %}">
+          </div>
+          <div class="card-content">
+            <span class="card-title">Reference Scape</span>
+            <p>Visualize and download networks using a landscape of references.</p>
+          </div>
+          <div class="card-action">
+            <a class="waves-effect waves-light btn graph-select">Select</a>
+          </div>
+        </div>
+      </div><!-- /card col -->
+
+      <!-- Papers Over Time Card -->
+      <div class="col s12 m6 l4"> <!-- Full width on mobile, 2 per row medium, 3 per row large -->
+        <div class="card">
+          <div class="card-image margin-5">
+            <img src="{% static 'images/papers-over-time.svg' %}">
+          </div>
+          <div class="card-content">
+            <span class="card-title">Papers Over Time</span>
+            <p>Visualize how many papers are published each year in your file.</p>
+          </div>
+          <div class="card-action">
+            <a class="waves-effect waves-light btn graph-select">Select</a>
+          </div>
+        </div>
+      </div><!-- /card col -->
+
+    </div> <!-- /row 1 -->
+
+    <div class="row"> <!-- ROW 2 -->
+
+      <!-- Journals Over Time Card-->
+      <div class="col s12 m6 l4"> <!-- Full width on mobile, 2 per row medium, 3 per row large -->
+        <div class="card">
+          <div class="card-image margin-5">
+            <img src="{% static 'images/journals-over-time.svg' %}">
+          </div>
+          <div class="card-content">
+            <span class="card-title">Journals Over Time</span>
+            <p>Visualize and download the journals publishing the most papers over time in your file.</p>
+          </div>
+          <div class="card-action">
+            <a class="waves-effect waves-light btn graph-select">Select</a>
+          </div>
+        </div>
+      </div><!-- /card col -->
+
+      <!-- Keywords Over Time Card -->
+      <div class="col s12 m6 l4"> <!-- Full width on mobile, 2 per row medium, 3 per row large -->
+        <div class="card">
+          <div class="card-image margin-5">
+            <img src="{% static 'images/keywords-over-time.svg' %}">
+          </div>
+          <div class="card-content">
+            <span class="card-title">Keywords Over Time</span>
+            <p>Visualize and download the use of each keyword over time in your file.</p>
+          </div>
+          <div class="card-action">
+            <a class="waves-effect waves-light btn graph-select">Select</a>
+          </div>
+        </div>
+      </div><!-- /card col -->
+
+      <!-- Top Journals Per Year CARD -->
+      <div class="col s12 m6 l4"> <!-- Full width on mobile, 2 per row medium, 3 per row large -->
+        <div class="card">
+          <div class="card-image margin-5">
+            <img src="{% static 'images/top-journals-per-year.svg' %}">
+          </div>
+          <div class="card-content">
+            <span class="card-title">Top Journals per Year</span>
+            <p>Visualize journals publishing the most papers each year in your file.</p>
+          </div>
+          <div class="card-action">
+            <a class="waves-effect waves-light btn graph-select">Select</a>
+          </div>
+        </div>
+      </div><!-- /card col -->
+
+      <!-- Top Keywords Per Year CARD -->
+      <div class="col s12 m6 l4"> <!-- Full width on mobile, 2 per row medium, 3 per row large -->
+        <div class="card">
+          <div class="card-image margin-5">
+            <img src="{% static 'images/top-keywords-per-year.svg' %}">
+          </div>
+          <div class="card-content">
+            <span class="card-title">Top Keywords per Year</span>
+            <p>Visualize the most used keywords each year in your file.</p>
+          </div>
+          <div class="card-action">
+            <a class="waves-effect waves-light btn graph-select">Select</a>
+          </div>
+        </div>
+      </div><!-- /card col -->
+
+      <!-- Sankey CARD -->
+      <div class="col s12 m6 l4"> <!-- Full width on mobile, 2 per row medium, 3 per row large -->
+        <div class="card">
+          <div class="card-image margin-5">
+            <img src="{% static 'images/flat-edge-sankey.svg' %}">
+          </div>
+          <div class="card-content">
+            <span class="card-title">A-K-J Sankey</span>
+            <p>Visualize the main authors, keywords, journals, and how they are related, as a Sankey diagram.</p>
+          </div>
+          <div class="card-action">
+            <a class="waves-effect waves-light btn graph-select">Select</a>
+          </div>
+        </div>
+      </div><!-- /card col -->
+
+    </div> <!-- /row 1 -->
+
+    <!-- Dropdown menu from a button -->
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+
+            <h6>Button with drop down menus</h6>
+            <br>
+
+            <!-- Dropdown trigger -->
+            <a class="dropdown-button btn blue darken-4" href="#" data-activates="dropdown-list-1">Select Option</a>
+
+            <!-- Dropdown structure -->
+            <ul id="dropdown-list-1" class="dropdown-content">
+              <li><a href="#">One</a></li>
+              <li><a href="#">Two</a></li>
+              <li><a href="#">Three</a></li>
+              <li><a href="#">Four</a></li>
+              <li><a href="#">Five</a></li>
+            </ul>
+
+          </div> <!-- /card-content -->
+        </div>
+      </div>
+    </div> <!-- /row  -->
+
+    <!-- TODO Add sample form selection boxes -->
+    <!-- Single Item Form Select Drop Down -->
+    <!-- Needs to be initialised via JS below body
+        In addition, you will need a separate call for any dynamically generated select elements your page generates. -->
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+
+            <h6>Single Item Form Select</h6>
+            <br>
+
+            <div class="row">
+              <div class="input-field col s6"> <!-- Wrap in input-field for proper alignment -->
+                <select>
+                  <option value="" disabled selected>Select Field</option>
+                  <option value="fn">File Name</option>
+                  <option value="vr">Version Number</option>
+                  <option value="pt">Publication Type</option>
+                  <option value="au">Authors</option>
+                  <option value="af">Author Full Name</option>
+                </select>
+                <label>Select Field</label>
+              </div>
+            </div>
+
+          </div> <!-- /card-content -->
+        </div>
+      </div>
+    </div> <!-- /row -->
+
+    <!-- TODO Add form slider for filter selection -->
+    <!-- Slider range selector for data filtering -->
+    <!-- Needs to additionally link to nouislider.css and nouislider.js in the extras folder
+         Also need to initialise via JS below the body. -->
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+
+            <h6>Select Start & End Year to Filter Data</h6>
+            <br>
+
+            <div id="range-slider"></div>
+            <div class="left">1900</div>
+            <div class="right">2030</div>
+            <br>
+          </div> <!-- /card-content -->
+        </div>
+      </div>
+    </div> <!-- /row -->
+
+    <!-- Standard file uploader -->
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+
+            <div class="row">
+              <div class="col s9">
+                <form action="#">
+                  <div class="file-field">
+                    <p>Select .CSV file to upload</p>
+                    <br>
+                    <div class="btn blue darken-4">
+                      <span>File</span>
+                      <input type="file">
+                    </div>
+                    <div class="file-path-wrapper">
+                      <input class="file-path validate" type="text">
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col s3">
+                <p>Save Uploaded File</p>
+                <br>
+                <!-- Switch -->
+                <div class="switch">
+                  <label>
+                    Off
+                    <input type="checkbox">
+                    <span class="lever"></span>
+                    On
+                  </label>
+                </div>
+              </div>
+              <!-- TODO Add upload/submit button -->
+            </div>
+
+          </div> <!-- /card-content -->
+        </div>
+      </div>
+    </div> <!-- /row -->
+
+    <!-- Dropzone JS-->
+    <!-- TODO Add CSV only validation -->
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+
+            <h6>Dropzone JS Upload</h6>
+            <br>
+
+            <div id="dropzone">
+              <form action="/upload" class="dropzone needsclick dz-clickable" id="demo-upload">
+                <div class="dz-message needsclick">
+                  Drop CSV file here or click to upload.
+                </div>
+              </form>
+            </div>
+
+          </div> <!-- /card-content -->
+        </div>
+      </div>
+    </div> <!-- /row -->
+
+    <!-- SIGMA JS Card Using Template Data -->
+    <div class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+
+            <h6>Sigma JS Graph</h6>
+            <br>
+
+            <div id="json-test-sigma-container"></div>
+
+
+
+          </div> <!-- /card-content -->
+        </div>
+      </div>
+    </div> <!-- /row -->
+
+  </div> <!-- /section -->
+
+  <!-- <div class="divider"> -->
+
+</div> <!-- /body container -->
+
+{% endblock bodyContent %}
